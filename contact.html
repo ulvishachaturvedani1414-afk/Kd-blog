@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Owlvish</title>
+
+    <meta name="description" content="Contact Owlvish for feedback, suggestions, or collaboration.">
+    <meta name="author" content="Owlvish">
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #faf7ff;
+            color: #333;
+            transition: 0.3s ease;
+        }
+        body.dark {
+            background: #1a1a1a;
+            color: #eee;
+        }
+
+        header {
+            background: #b497d6;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        body.dark header {
+            background: #654c8c;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #6d4ca7;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #6d4ca7;
+        }
+        body.dark .toggle-btn {
+            background: #2e2e2e;
+            color: #eee;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            border-left: 6px solid #b497d6;
+        }
+        body.dark .container {
+            background: #2b2b2b;
+            border-left-color: #9e85c9;
+        }
+
+        h1 {
+            font-family: "Baloo 2", cursive;
+            color: #6d4ca7;
+        }
+        body.dark h1 {
+            color: #d3c4ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            background: #ede4ff;
+            color: #6d4ca7;
+            font-size: 14px;
+        }
+        body.dark footer {
+            background: #2e2e2e;
+            color: #ddd;
+        }
+        /* NAV LINK COLORS */
+        nav a {
+            margin: 0 15px;
+            color: #6d4ca7;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* DARK MODE NAV LINKS */
+        body.dark nav a {
+            color:#d3c4ff;
+        }
+        /* OPTIONAL: hover effect */
+        nav a:hover {
+            text-decoration: underline;
+        }
+        body.dark nav a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle-btn" id="toggleDark" aria-label="Toggle dark mode">
+        Dark Mode
+    </button>
+</header>
+
+<div class="container">
+    <h1>Contact Owlvish</h1>
+
+    <p>
+        Have feedback, drama recommendations, collaboration ideas, or just want to talk about K-dramas?
+        I’d love to hear from you 💜
+    </p>
+
+    <p>
+        📧 <strong>Email:</strong><br>
+        ulvishayt@gmail.com
+    </p>
+
+    <p>
+        You can reach out for:
+    </p>
+
+    <ul>
+        <li>K-drama suggestions</li>
+        <li>Content feedback</li>
+        <li>Collaboration requests</li>
+        <li>Corrections or updates</li>
+    </ul>
+
+    <p>
+        I usually respond within 24–48 hours.
+    </p>
+</div>
+
+<footer>
+    © 2025 Owlvish — All Rights Reserved
+</footer>
+<script>
+    const toggleBtn = document.getElementById("toggleDark");
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        toggleBtn.textContent =
+            document.body.classList.contains("dark")
+            ? "Light Mode"
+            : "Dark Mode";
+    });
+</script>
+
+
+</body>
+</html>
