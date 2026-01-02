@@ -787,6 +787,73 @@
         body.dark nav a:hover {
             color: #ffffff;
         }
+
+        .funky-title {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 22px 44px;
+            background: linear-gradient(135deg, #9b7bdc, #c2a9f2);
+            color: #ffffff;
+            font-family: 'Baloo 2', cursive;
+            font-size: 36px;
+            font-weight: 700;
+            border-radius: 42px;
+            letter-spacing: 1px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(180, 151, 214, 0.6);
+            transition: all 0.4s ease;
+            animation: popIn 0.9s ease;
+        }
+
+        .funky-title span {
+            display: block;
+            font-size: 22px;
+            font-weight: 500;
+            margin-top: 6px;
+            opacity: 0.95;
+        }
+
+        /* 🌙 PERFECT DARK MODE MATCH */
+        body.dark .funky-title {
+            background: linear-gradient(135deg, #5b3f86, #8e6cd1);
+            box-shadow: 0 10px 30px rgba(159, 140, 204, 0.4);
+            color: #ffffff;
+        }
+
+        body.dark .funky-title span {
+            opacity: 0.9;
+        }
+
+/* ✨ Soft glow on hover (both modes) */
+        .funky-title:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 35px rgba(180, 151, 214, 0.75);
+        }
+
+/* 🎉 Entrance animation */
+        @keyframes popIn {
+            from {
+                transform: scale(0.75);
+                opacity: 0;
+            }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+        }
+
+/* 📱 Mobile-friendly */
+        @media (max-width: 600px) {
+            .funky-title {
+                font-size: 26px;
+                padding: 16px 26px;
+            }
+        .funky-title span {
+            font-size: 18px;
+
+        }
+        }
+
     </style>
 </head>
 
@@ -802,6 +869,11 @@
 
     <h1>Owlvish</h1>
     <button class="toggle-btn" id="toggleDark">Dark Mode</button>
+    <div class="funky-title">
+    Best K-dramas of all time <br>
+    <span>according to your taste</span>
+    </div>
+
 </header>
 
 <div class="search-box">
@@ -1397,6 +1469,7 @@
 
 </body>
 </html>
+
 
 
 
