@@ -1485,9 +1485,26 @@
 <footer>
     © 2025 Owlvish — All Rights Reserved
 </footer>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".blog-container");
+    if (!container) return;
+
+    const posts = Array.from(container.querySelectorAll(".post"));
+
+    posts.sort((a, b) => {
+        const aNum = parseInt(a.querySelector("h2")?.innerText);
+        const bNum = parseInt(b.querySelector("h2")?.innerText);
+        return aNum - bNum;
+    });
+
+    posts.forEach(post => container.appendChild(post));
+});
+</script>
 
 </body>
 </html>
+
 
 
 
